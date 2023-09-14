@@ -14,7 +14,7 @@ module.exports = {
 		'prettier/prettier': [
 			'error',
 			{
-				printWidth: 80,
+				printWidth: 120,
 				tabWidth: 3,
 				useTabs: true,
 				singleQuote: true,
@@ -26,19 +26,11 @@ module.exports = {
 		'no-tabs': 'off',
 		'no-useless-constructor': 'off',
 		'@typescript-eslint/no-useless-constructor': 'error',
-		'sort-imports': [
-			'error',
-			{ ignoreCase: true, ignoreDeclarationSort: true },
-		],
+		'sort-imports': ['error', { ignoreCase: true, ignoreDeclarationSort: true }],
 		'import/order': [
 			1,
 			{
-				groups: [
-					['external', 'builtin'],
-					'internal',
-					['sibling', 'parent'],
-					'index',
-				],
+				groups: [['external', 'builtin'], 'internal', ['sibling', 'parent'], 'index'],
 				pathGroups: [
 					{
 						pattern: '@domain-forum/**',
@@ -59,11 +51,7 @@ module.exports = {
 	},
 	settings: {
 		'import/parsers': {
-			[require.resolve('@typescript-eslint/parser')]: [
-				'.ts',
-				'.tsx',
-				'.d.ts',
-			],
+			[require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
 		},
 	},
 };
